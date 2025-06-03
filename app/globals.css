@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+/* *{
+  font-family: Outfit, sans-serif;
+} */
+
 @layer utilities {
   .font-outfit {
     font-family: var(--font-outfit);
@@ -7,6 +11,22 @@
 
   .font-ovo {
     font-family: var(--font-ovo);
+  }
+
+  .lightHover {
+    background-color: #fcf4ff;
+  }
+
+  .darkHover {
+    background-color: #11001F;
+  }
+
+  .darkTheme {
+    background-color: #11001F;
+  }
+
+  .hover\:lightHover:hover {
+    background-color: #fcf4ff;
   }
 }
 
