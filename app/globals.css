@@ -1,8 +1,8 @@
 @import 'tailwindcss';
 
-/* *{
+*{
   font-family: Outfit, sans-serif;
-} */
+} 
 
 @layer utilities {
   .font-outfit {
