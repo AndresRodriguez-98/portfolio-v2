@@ -27,27 +27,27 @@ const Navbar = () => {
 
         <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
           <li>
-            <a className="font-display" href="#home">
+            <a className="font-outfit" href="#home">
               Home
             </a>
           </li>
           <li>
-            <a className="font-display" href="#about">
+            <a className="font-outfit" href="#about">
               About me
             </a>
           </li>
           <li>
-            <a className="font-display" href="#services">
+            <a className="font-outfit" href="#services">
               Services
             </a>
           </li>
           <li>
-            <a className="font-display" href="#work">
+            <a className="font-outfit" href="#work">
               My Work
             </a>
           </li>
           <li>
-            <a className="font-display" href="#contact">
+            <a className="font-outfit" href="#contact">
               Contact me
             </a>
           </li>
@@ -59,7 +59,7 @@ const Navbar = () => {
           </button>
           <a
             href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-display"
+            className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-outfit"
           >
             Contact <Image src={assets.arrow_icon} alt="" className="w-3" />
           </a>
@@ -76,27 +76,27 @@ const Navbar = () => {
             <Image src={assets.close_black} alt="" className="w-5 cursor-pointer " />
           </div>
           <li>
-            <a className="font-display" onClick={closeMenu} href="#home">
+            <a className="font-outfit" onClick={closeMenu} href="#home">
               Home
             </a>
           </li>
           <li>
-            <a className="font-display" onClick={closeMenu} href="#about">
+            <a className="font-outfit" onClick={closeMenu} href="#about">
               About me
             </a>
           </li>
           <li>
-            <a className="font-display" onClick={closeMenu} href="#services">
+            <a className="font-outfit" onClick={closeMenu} href="#services">
               Services
             </a>
           </li>
           <li>
-            <a className="font-display" onClick={closeMenu} href="#work">
+            <a className="font-outfit" onClick={closeMenu} href="#work">
               My Work
             </a>
           </li>
           <li>
-            <a className="font-display" onClick={closeMenu} href="#contact">
+            <a className="font-outfit" onClick={closeMenu} href="#contact">
               Contact me
             </a>
           </li>

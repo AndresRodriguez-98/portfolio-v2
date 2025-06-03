@@ -1,9 +1,12 @@
 @import 'tailwindcss';
 
-@theme {
-  --font-display: var(--font-ovo);
-  --font-body: var(--font-outfit);
-  --color-lightHover: #fcf4ff;
-  --color-darkHover: #2a004a;
-  --color-darkTheme: #11001F;
+@layer utilities {
+  .font-outfit {
+    font-family: var(--font-outfit);
+  }
+
+  .font-ovo {
+    font-family: var(--font-ovo);
+  }
 }
+
