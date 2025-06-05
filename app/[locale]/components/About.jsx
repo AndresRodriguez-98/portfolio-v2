@@ -1,17 +1,22 @@
+'use client';
+
 import React from "react";
 import { assets, infoList, toolsData } from "@/assets/assets";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { motion } from "motion/react";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation("About");
   const resolvedTheme = useTheme();
   const isDarkMode = resolvedTheme.theme === "dark";
 
   return (
     <motion.div
       id="about"
-      className="w-full px-[12%] py-10 scroll-mt-20"
+      className="w-full px-[12%] py-28 md:py-12 scroll-mt-20"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -22,7 +27,7 @@ const About = () => {
         transition={{ duration: 0.5, delay: 0.3 }}
         className="text-center mb-2 text-lg font-ovo"
       >
-        Introduction
+        {t("introduction")}
       </motion.h4>
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
@@ -30,7 +35,7 @@ const About = () => {
         transition={{ duration: 0.5, delay: 0.5 }}
         className="text-center text-5xl font-ovo"
       >
-        About me
+        {t("aboutTitle")}
       </motion.h2>
 
       <motion.div
@@ -55,11 +60,7 @@ const About = () => {
           className="flex-1"
         >
           <p className="max-w-2xl font-ovo mb-10">
-            Hello! I'm Andrés Rodriguez, a passionate web developer with a focus on creating interactive and responsive
-            web applications. I specialize in using modern technologies like React, Next.js, and Tailwind CSS to build
-            user-friendly interfaces that provide a seamless experience across all devices. My goal is to combine
-            creativity with technical expertise to deliver high-quality solutions that meet the needs of users and
-            businesses alike.
+            {t("description")}
           </p>
 
           <motion.ul
@@ -87,7 +88,7 @@ const About = () => {
             transition={{ duration: 0.5, delay: 1.3 }}
             className="text-gray-700 font-ovo my-6 dark:text-white/90"
           >
-            Tools I use
+            {t("toolsTitle")}
           </motion.h4>
 
           <motion.ul 

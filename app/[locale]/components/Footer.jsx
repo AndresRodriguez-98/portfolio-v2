@@ -1,9 +1,13 @@
+'use client';
+
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
 import { useTheme } from "next-themes";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation("Footer");
   const resolvedTheme = useTheme();
   const isDarkMode = resolvedTheme.theme === "dark";
   
@@ -18,7 +22,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
-        <p>© Andres Rodriguez 2025. All rights reserved</p>
+        <p>© Andres Rodriguez 2025. {t("rights")}</p>
         <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
           <li>
             <a target="_blank" href="https://github.com/AndresRodriguez-98">

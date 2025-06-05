@@ -2,8 +2,10 @@ import React from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
+  const { t } = useTranslation("Header");
   return (
     <div className="w-11/12 pt-48 md:pt-0 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
       <motion.div
@@ -19,7 +21,7 @@ const Header = () => {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-ovo"
       >
-        Hi! I'm Andres Rodriguez
+        {t("greeting")}
       </motion.h3>{" "}
       <Image src={assets.hand_icon} alt="" className="w-6" />
       <motion.h1
@@ -28,7 +30,7 @@ const Header = () => {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="text-3xl sm:text-6xl lg:text-[66px] font-ovo"
       >
-        web developer.
+        {t("profession")}
       </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}
@@ -36,9 +38,7 @@ const Header = () => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto font-ovo"
       >
-        I specialize in creating interactive and responsive web applications using modern technologies like React,
-        Next.js, and Tailwind CSS. My goal is to build user-friendly interfaces that provide a seamless experience
-        across all devices.
+        {t("description")}
       </motion.p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <motion.a
@@ -48,7 +48,7 @@ const Header = () => {
           href="#contact"
           className="px-10 py-3 border border-white rounded-full bg-black dark:bg-transparent  text-white flex items-center gap-2 "
         >
-          contact me <Image src={assets.right_arrow_white} alt="" className="w-4" />
+          {t("contactButton")} <Image src={assets.right_arrow_white} alt="" className="w-4" />
         </motion.a>
         <motion.a
           initial={{ y: 30, opacity: 0 }}
@@ -58,7 +58,7 @@ const Header = () => {
           download
           className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black"
         >
-          my resume <Image src={assets.download_icon} alt="" className="w-4" />
+          {t("resumeButton")} <Image src={assets.download_icon} alt="" className="w-4" />
         </motion.a>
       </div>
     </div>

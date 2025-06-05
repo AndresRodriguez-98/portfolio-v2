@@ -3,8 +3,10 @@ import React from "react";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
+  const { t } = useTranslation("Services");
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -19,7 +21,7 @@ const Services = () => {
         transition={{ delay: 0.3, duration: 0.6 }}
         className="text-center mb-2 text-lg font-ovo"
       >
-        What I offer
+        {t("sectionTitle")}
       </motion.h4>
 
       <motion.h2
@@ -28,7 +30,7 @@ const Services = () => {
         transition={{ delay: 0.5, duration: 1 }}
         className="text-center text-5xl font-ovo"
       >
-        My Services
+        {t("sectionSubtitle")}
       </motion.h2>
 
       <motion.p
@@ -37,9 +39,7 @@ const Services = () => {
         transition={{ delay: 0.7, duration: 0.5 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo"
       >
-        I offer a range of web development services to help you build and enhance your online presence. Whether you need
-        a new website, a redesign, or ongoing maintenance, I can provide tailored solutions to meet your needs. My
-        services include:
+        {t("description")}
       </motion.p>
 
       <motion.div
@@ -58,7 +58,7 @@ const Services = () => {
             <h3 className="my-4 font-ovo font-semibold text-gray-700 dark:text-white">{title}</h3>
             <p className="font-ovo text-gray-600 text-sm leading-5 dark:text-white/90">{description}</p>
             <a href={link} className="">
-              Read more <Image src={assets.right_arrow} alt="" className="w-4" />
+              {t("readMore")} <Image src={assets.right_arrow} alt="" className="w-4" />
             </a>
           </motion.div>
         ))}

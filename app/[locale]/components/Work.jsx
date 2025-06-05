@@ -1,11 +1,15 @@
+"use client";
+
 import { workData } from "@/assets/assets";
 import React from "react";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { useTheme } from "next-themes";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const Work = () => {
+  const { t } = useTranslation("Work");
   const resolvedTheme = useTheme();
 
   const arrowIcon = resolvedTheme === "dark" ? assets.right_arrow_bold_dark : assets.right_arrow_bold;
@@ -24,7 +28,7 @@ const Work = () => {
         transition={{ duration: 0.5, delay: 0.3 }}
         className="text-center mb-2 text-lg font-ovo"
       >
-        My portfolio
+        {t("sectionTitle")}
       </motion.h4>
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
@@ -32,7 +36,7 @@ const Work = () => {
         transition={{ duration: 0.5, delay: 0.3 }}
         className="text-center text-5xl font-ovo"
       >
-        My latests projects
+        {t("sectionSubtitle")}
       </motion.h2>
 
       <motion.p
@@ -41,9 +45,7 @@ const Work = () => {
         transition={{ duration: 0.5, delay: 0.8 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo"
       >
-        Here are some of my latest projects that showcase my skills in web development. Each project demonstrates my
-        ability to create responsive, user-friendly interfaces and implement modern web technologies. Feel free to
-        explore them and see the quality of my work.
+        {t("description")}
       </motion.p>
 
       <motion.div
@@ -82,7 +84,8 @@ const Work = () => {
         href=""
         className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-[#fcf4ff] duration-500 dark:text-white dark:border-white dark:hover:bg-[#2a004a]"
       >
-        Show more <Image src={arrowIcon} alt="Right Arrow" className="w-4" />
+        {t("showMore")}
+        <Image src={arrowIcon} alt="Right Arrow" className="w-4" />
       </motion.a>
     </motion.div>
   );
