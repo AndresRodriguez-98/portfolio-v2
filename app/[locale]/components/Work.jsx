@@ -20,7 +20,7 @@ const Work = ({ locale }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="work"
-      className="w-full px-[12%] py-10 scroll-mt-20"
+      className="w-full px-[5%] py-10 scroll-mt-20"
     >
       <motion.h4
         initial={{ opacity: 0, y: -20 }}
@@ -63,13 +63,13 @@ const Work = ({ locale }) => {
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-300 group-hover:bottom-7"
+              className="bg-white w-10/12 rounded-md absolute bottom-3 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-300 group-hover:bottom-7"
             >
               <div>
                 <h2 className="font-semibold">{project.title}</h2>
-                <p className="text-sm text-gray-700">{project.description}</p>
+                <p className="text-sm text-gray-700">{locale === "en" ? project.description : project.descriptionSpanish}</p>
               </div>
-              <div className="border rounded-full border-black w-9 asoect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+              <div className="border rounded-full border-black w-9 h-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition ml-0.5">
                 <Image src={assets.send_icon} alt="Send Icon" className="w-5" />
               </div>
             </motion.div>

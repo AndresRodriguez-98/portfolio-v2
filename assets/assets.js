@@ -97,29 +97,33 @@ export const assets = {
     java,
     python,
     mysql,
-    github
+    github,
 };
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
+        title: 'EcoSistema',
+        description: 'Full stack work with a team with SCRUM methodology',
+        descriptionSpanish: 'Proyecto Full Stack con un equipo utilizando metodología SCRUM',
+        bgImage: '/ecosist.jpeg',
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
+        title: 'OfiFlex',
+        description: 'Server-side work with 4 other participants',
+        descriptionSpanish: 'Trabajé del lado del servidor junto con 4 participantes más',
+        bgImage: '/ofiflex.jpeg',
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
+        title: 'DonRemolo',
+        description: 'FullStack ecommerce project with a team with SCRUM methodology',
+        descriptionSpanish: 'Proyecto FullStack ecommerce con un equipo ágil',
+        bgImage: '/donremolo.jpeg',
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
+        title: 'Loguin Challenge',
+        description: 'Frontend challenge project with React and Tailwind.css',
+        descriptionSpanish: 'Proyecto de desafío Frontend con React y Tailwind.css',
+        bgImage: '/flexxxy.png',
     },
 ]
 
