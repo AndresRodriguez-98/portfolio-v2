@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 
-const Work = () => {
+const Work = ({ locale }) => {
   const { t } = useTranslation("Work");
   const resolvedTheme = useTheme();
 

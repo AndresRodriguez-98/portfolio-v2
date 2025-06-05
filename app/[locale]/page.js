@@ -13,16 +13,16 @@ import Work from "./components/Work";
 
 const i18nNamespaces = ['Navbar', 'Header', 'About', 'Services', 'Work', 'Contact', 'Footer'];
 
-export default async function Home({ params: {locale} }) {
+export default async function Home({ params: { locale } }) {
 
-  const {resources} = await initTranslations(locale, i18nNamespaces);
+  const { resources } = await initTranslations(locale, i18nNamespaces);
   return (
     <TranslationsProvider resources={resources} locale={locale} namespaces={i18nNamespaces}>
       <Navbar />
       <Header />
-      <About />
-      <Services />
-      <Work />
+      <About locale={locale} />
+      <Services locale={locale} />
+      <Work locale={locale} />
       <Contact />
       <Footer />
     </TranslationsProvider>

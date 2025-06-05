@@ -7,6 +7,7 @@ import project_icon from './project-icon.png';
 import project_icon_dark from './project-icon-dark.png';
 import vscode from './vscode.png';
 import firebase from './firebase.png';
+import react from './reactIcon.png';
 import figma from './figma.png';
 import git from './git.png';
 import mongodb from './mongodb.png';
@@ -35,6 +36,17 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import node from './Node.js.png';
+import next from './Next.js.png';
+import typescript from './TypeScript.png';
+import tailwind from './tailwind.png';
+import sass from './sass.png';
+import docker from './social.png';
+import javascript from './javascript.png';
+import java from './java.png';
+import python from './python.png';
+import mysql from './mysql.png';
+import github from './github.png';
 
 export const assets = {
     user_image,
@@ -73,7 +85,19 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    react,
+    node,
+    next,
+    typescript,
+    tailwind,
+    sass,
+    docker,
+    javascript,
+    java,
+    python,
+    mysql,
+    github
 };
 
 export const workData = [
@@ -100,18 +124,18 @@ export const workData = [
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.web_icon, title: 'Frontend development', titleSpanish: 'Desarrollo Frontend', description: 'creating the user interface and user experience...', descriptionSpanish: 'Desarrollo de la interfaz de usuario y experiencia de usuario...', link: '' },
+    { icon: assets.mobile_icon, title: 'Backend development', titleSpanish: 'Desarrollo Backend', description: 'building the server-side logic and databases...', descriptionSpanish: 'Desarrollo del lado del servidor y bases de datos...', link: '' },
+    { icon: assets.ui_icon, title: 'Mobile development', titleSpanish: 'Desarrollo Mobile', description: 'creating mobile applications...', descriptionSpanish: 'Desarrollo de aplicaciones móviles...', link: '' },
+    { icon: assets.graphics_icon, title: 'Agile development', titleSpanish: 'Desarrollo Agile', description: 'Working in an Agile environment...', descriptionSpanish: 'Trabajar en un entorno con metodologías ágiles...', link: '' },
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', titleSpanish: 'Lenguajes', description: 'HTML, CSS, JavaScript, React Js, Next Js' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', titleSpanish: 'Educación', description: 'B.Tech in Computer Science', descriptionSpanish: 'Analista Programador Universitario' },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', titleSpanish: 'Proyectos', description: 'Built more than 5 projects', descriptionSpanish: 'Realicé más de 5 proyectos' }
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.react, assets.node, assets.next, assets.typescript, assets.tailwind, assets.sass, assets.docker, assets.javascript, assets.java, assets.python, assets.mysql
 ];

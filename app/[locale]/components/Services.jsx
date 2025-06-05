@@ -5,7 +5,7 @@ import { assets } from "@/assets/assets";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 
-const Services = () => {
+const Services = ({ locale }) => {
   const { t } = useTranslation("Services");
   return (
     <motion.div
@@ -48,15 +48,15 @@ const Services = () => {
         transition={{ duration: 0.5, delay: 0.9 }}
         className="grid autoGrid gap-6 my-10"
       >
-        {serviceData.map(({ icon, title, description, link }, index) => (
+        {serviceData.map(({ icon, title, titleSpanish, description, descriptionSpanish, link }, index) => (
           <motion.div
             whileHover={{ scale: 1.05 }}
             key={index}
             className="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black shadow-2xl cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 dark:hover:bg-[#2a004a] dark:hover:shadow-white"
           >
             <Image src={icon} alt={title} className="w-7 mt-3" />
-            <h3 className="my-4 font-ovo font-semibold text-gray-700 dark:text-white">{title}</h3>
-            <p className="font-ovo text-gray-600 text-sm leading-5 dark:text-white/90">{description}</p>
+            <h3 className="my-4 font-ovo font-semibold text-gray-700 dark:text-white">{locale === "en" ? title : titleSpanish}</h3>
+            <p className="font-ovo text-gray-600 text-sm leading-5 dark:text-white/90">{locale === "en" ? description : descriptionSpanish}</p>
             <a href={link} className="">
               {t("readMore")} <Image src={assets.right_arrow} alt="" className="w-4" />
             </a>

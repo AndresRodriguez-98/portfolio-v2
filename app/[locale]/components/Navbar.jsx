@@ -15,7 +15,6 @@ const Navbar = () => {
   const sideMenuRef = useRef();
 
   const resolvedTheme = useTheme();
-  const logo = resolvedTheme.theme === "dark" ? assets.logo_dark : assets.logo;
   const isDarkMode = resolvedTheme.theme === "dark";
 
   const openMenu = () => {
