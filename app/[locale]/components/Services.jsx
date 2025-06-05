@@ -1,3 +1,5 @@
+'use client';
+
 import { serviceData } from "@/assets/assets";
 import React from "react";
 import Image from "next/image";
