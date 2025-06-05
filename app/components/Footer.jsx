@@ -5,15 +5,14 @@ import { useTheme } from "next-themes";
 
 const Footer = () => {
   const resolvedTheme = useTheme();
-  const logo = resolvedTheme === "dark" ? assets.logo_dark : assets.logo;
-  const mail_icon = resolvedTheme === "dark" ? assets.mail_icon_dark : assets.mail_icon;
+  const isDarkMode = resolvedTheme.theme === "dark";
   
   return (
     <div className="mt-20">
       <div className="text-center">
-        <Image src={logo} alt="logo" className="w-25 h-25 mx-auto" />
+        <Image src={isDarkMode ? assets.logo_dark : assets.logo} alt="logo" className="w-25 h-25 mx-auto" />
         <div className="w-max flex items-center gap-2 mx-auto font-outfit">
-          <Image src={mail_icon} alt="" className="w-6" />
+          <Image src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon} alt="" className="w-6" />
           andresrodriguezab98@gmail.com
         </div>
       </div>
