@@ -5,6 +5,7 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import { useState } from "react";
 import "../globals.css";
+import { motion } from "motion/react";
 
 const Contact = () => {
   const [result, setResult] = useState("");
@@ -33,19 +34,40 @@ const Contact = () => {
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
       id="contact"
       className="w-full px-[12%] py-10 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none"
     >
-      <h4 className="text-center mb-2 text-lg font-ovo">Connect with me</h4>
-      <h2 className="text-center text-5xl font-ovo"> Get in touch </h2>
+      <motion.h4
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="text-center mb-2 text-lg font-ovo"
+      >
+        Connect with me
+      </motion.h4>
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="text-center text-5xl font-ovo"
+      >
+        Get in touch
+      </motion.h2>
 
       <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo">
         I'd love to hear from you! Whether you have a question, a project idea, or just want to say hello, feel free to
         reach out to me using the contact form below.
       </p>
 
-      <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
+      <motion.form 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.9 }}
+      onSubmit={onSubmit} className="max-w-2xl mx-auto">
         <div className="grid autoGrid gap-6 mb-8 mt-10">
           <input
             type="text"
@@ -77,8 +99,8 @@ const Contact = () => {
         </button>
 
         <p className="mt-4">{result}</p>
-      </form>
-    </div>
+      </motion.form >
+    </motion.div>
   );
 };
 
