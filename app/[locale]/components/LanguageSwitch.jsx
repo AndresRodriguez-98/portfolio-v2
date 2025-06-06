@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useRouter } from 'next/navigation';
-import { usePathname } from 'next/navigation';
-import { useTranslation } from 'react-i18next';
-import i18nConfig from '@/i18nConfig';
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { useTranslation } from "react-i18next";
+import i18nConfig from "@/i18nConfig";
 
 export default function LanguageSwitch() {
   const { i18n } = useTranslation();
@@ -11,7 +11,7 @@ export default function LanguageSwitch() {
   const router = useRouter();
   const currentPathname = usePathname();
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     const newLocale = e.target.value;
 
     // set cookie for next-i18n-router
@@ -22,24 +22,19 @@ export default function LanguageSwitch() {
     document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
 
     // redirect to the new locale path
-    if (
-      currentLocale === i18nConfig.defaultLocale &&
-      !i18nConfig.prefixDefault
-    ) {
-      router.push('/' + newLocale + currentPathname);
+    if (currentLocale === i18nConfig.defaultLocale && !i18nConfig.prefixDefault) {
+      router.push("/" + newLocale + currentPathname);
     } else {
-      router.push(
-        currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
-      );
+      router.push(currentPathname.replace(`/${currentLocale}`, `/${newLocale}`));
     }
 
     router.refresh();
   };
 
   return (
-    <select onChange={handleChange} value={currentLocale}>
-      <option value="en">English</option>
-      <option value="es">Spanish</option>
+    <select className="border border-gray-300 rounded-md px-2 py-0.5 dark:bg-transparent dark:text-white" onChange={handleChange} value={currentLocale}>
+      <option className="bg-[#fcf4ff] dark:bg-[#2a004a]" value="en">English</option>
+      <option className="bg-[#fcf4ff] dark:bg-[#2a004a]" value="es">Spanish</option>
     </select>
   );
 }

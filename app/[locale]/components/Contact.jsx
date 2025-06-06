@@ -60,7 +60,7 @@ const Contact = () => {
         {t("sectionSubtitle")}
       </motion.h2>
 
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo">
+      <p className="max-w-2xl mx-auto mt-5 mb-12 font-ovo text-center">
         {t("description")}
       </p>
 

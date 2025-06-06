@@ -1,7 +1,6 @@
-import { Outfit, Ovo } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import Navbar from "./components/Navbar";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -9,22 +8,16 @@ const outfit = Outfit({
   variable: "--font-outfit",
 });
 
-const ovo = Ovo({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-ovo",
-});
-
 export const metadata = {
   title: "Portfolio - Andrés Rodriguez",
   description: "",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, params }) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html lang={params.locale} className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${outfit.variable} ${ovo.variable} antialiased leading-8 overflow-x-hidden`}
+        className={`${outfit.variable} antialiased leading-8 overflow-x-hidden`}
       >
         <Providers>
           {children}

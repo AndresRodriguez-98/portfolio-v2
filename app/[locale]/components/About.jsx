@@ -1,11 +1,13 @@
-'use client';
+"use client";
 
 import React from "react";
 import { assets, infoList, toolsData } from "@/assets/assets";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import InfoList from './InfoList';
+import ToolsList from "./ToolsList";
 
 const About = ({ locale }) => {
   const { t } = useTranslation("About");
@@ -15,7 +17,7 @@ const About = ({ locale }) => {
   return (
     <motion.div
       id="about"
-      className="w-full px-[12%] py-28 md:py-12 scroll-mt-20"
+      className="w-full px-[12%] py-48 md:py-12 scroll-mt-20"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -28,6 +30,7 @@ const About = ({ locale }) => {
       >
         {t("introduction")}
       </motion.h4>
+
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -58,53 +61,22 @@ const About = ({ locale }) => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="flex-1"
         >
-          <p className="max-w-2xl font-ovo mb-10">
-            {t("description")}
-          </p>
+          <p className="max-w-[70%] md:max-w-[100%] sm:max-w-2xl mx-auto mb-10 text-start">{t("description")}</p>
 
-          <motion.ul
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6"
-          >
-            {infoList.map(({ icon, iconDark, title, titleSpanish, description, descriptionSpanish }, index) => (
-              <motion.li
-                whileHover={{ scale: 1.05 }}
-                key={index}
-                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-xl hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-[#2a004a]/50"
-              >
-                <Image src={isDarkMode ? iconDark : icon} alt={title} className="w-7 mt-3" />
-                <h3 className="my-4 font-ovo font-semibold text-gray-700 dark:text-white">{locale === "es" ? titleSpanish : title}</h3>
-                <p className="font-ovo text-gray-600 text-sm dark:text-white/90">{locale === "es" && descriptionSpanish ? descriptionSpanish : description}</p>
-              </motion.li>
-            ))}
-          </motion.ul>
+          {/* Info List */}
+          <InfoList list={infoList} isDarkMode={isDarkMode} locale={locale} />
 
+          {/* Tools Section */}
           <motion.h4
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.3 }}
-            className="text-gray-700 font-ovo my-6 dark:text-white/90"
+            className="text-gray-700 my-6 dark:text-white/90 text-lg sm:text-xl text-center md:text-start"
           >
             {t("toolsTitle")}
           </motion.h4>
 
-          <motion.ul 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.5 }}
-          className="flex items-center gap-3 sm:gap-5">
-            {toolsData.map((tool, index) => (
-              <motion.li
-                whileHover={{ scale: 1.1 }}
-                className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
-                key={index}
-              >
-                <Image src={tool} alt="Tool" className="w-5 sm:w-7" />
-              </motion.li>
-            ))}
-          </motion.ul>
+          <ToolsList tools={toolsData} />
         </motion.div>
       </motion.div>
     </motion.div>

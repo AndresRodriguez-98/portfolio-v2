@@ -55,8 +55,9 @@ const Work = ({ locale }) => {
         className="grid autoGrid gap-5 my-10 dark:text-black"
       >
         {workData.map((project, index) => (
-          <div
+          <a
             key={index}
+            href={project.href}
             className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
             style={{ backgroundImage: `url(${project.bgImage})` }}
           >
@@ -73,7 +74,7 @@ const Work = ({ locale }) => {
                 <Image src={assets.send_icon} alt="Send Icon" className="w-5" />
               </div>
             </motion.div>
-          </div>
+          </a>
         ))}
       </motion.div>
 

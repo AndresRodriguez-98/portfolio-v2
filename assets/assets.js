@@ -106,24 +106,28 @@ export const workData = [
         description: 'Full stack work with a team with SCRUM methodology',
         descriptionSpanish: 'Proyecto Full Stack con un equipo utilizando metodología SCRUM',
         bgImage: '/ecosist.jpeg',
+        href: 'https://github.com/AndresRodriguez-98/ecosistema-front'
     },
     {
         title: 'OfiFlex',
         description: 'Server-side work with 4 other participants',
         descriptionSpanish: 'Trabajé del lado del servidor junto con 4 participantes más',
         bgImage: '/ofiflex.jpeg',
+        href: 'https://github.com/ayelengarcia/c18-19-n-node-react'
     },
     {
         title: 'DonRemolo',
         description: 'FullStack ecommerce project with a team with SCRUM methodology',
         descriptionSpanish: 'Proyecto FullStack ecommerce con un equipo ágil',
         bgImage: '/donremolo.jpeg',
+        href: 'https://github.com/adanj27/IdeasFactory-PizzeriaDonRemolo'
     },
     {
-        title: 'Loguin Challenge',
-        description: 'Frontend challenge project with React and Tailwind.css',
-        descriptionSpanish: 'Proyecto de desafío Frontend con React y Tailwind.css',
-        bgImage: '/flexxxy.png',
+        title: 'Counter Challenge',
+        description: 'Next.js challenge with Supabase and ServerActions',
+        descriptionSpanish: 'Reto de Next.js con Supabase y ServerActions',
+        bgImage: '/wespeak.png',
+        href: 'https://github.com/AndresRodriguez-98/challenge-ws-drizzle'
     },
 ]
 
@@ -135,9 +139,9 @@ export const serviceData = [
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', titleSpanish: 'Lenguajes', description: 'HTML, CSS, JavaScript, React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', titleSpanish: 'Educación', description: 'B.Tech in Computer Science', descriptionSpanish: 'Analista Programador Universitario' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', titleSpanish: 'Proyectos', description: 'Built more than 5 projects', descriptionSpanish: 'Realicé más de 5 proyectos' }
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', titleSpanish: 'Lenguajes', description: 'JavaScript, Java, Python, .NET' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', titleSpanish: 'Educación', description: 'Computer Science Degree', descriptionSpanish: 'Analista Programador Universitario' },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', titleSpanish: 'Proyectos', description: 'Built more than 20 projects', descriptionSpanish: 'Realicé más de 20 proyectos' }
 ];
 
 export const toolsData = [
