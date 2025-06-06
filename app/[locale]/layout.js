@@ -13,7 +13,13 @@ export const metadata = {
   description: "",
 };
 
-export default function RootLayout({ children, params }) {
+export default async function RootLayout(props) {
+  const params = await props.params;
+
+  const {
+    children
+  } = props;
+
   return (
     <html lang={params.locale} className="scroll-smooth" suppressHydrationWarning>
       <body

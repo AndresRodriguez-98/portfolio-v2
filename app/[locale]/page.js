@@ -16,7 +16,9 @@ export async function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }]; // Agregá más idiomas si tenés
 }
 
-export default async function Home({ params }) {
+export default async function Home(props) {
+
+  const params = await props.params;
   // params.locale es el idioma actual, por ejemplo 'en' o 'es'
   const { locale } = params;
   // Inicializamos las traducciones para el idioma actual
